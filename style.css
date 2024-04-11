@@ -1,398 +1,1409 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-}
-header {
-    display: flex;
-    justify-content: space-between;
-    background: rgb(251,251,251);
-    box-shadow: 0px 0px 15px 5px rgb(230, 229, 229);
-}
-.logo {
-    display: flex;
-}
-.dropdown {
-    float: left;
-    display: none;
-    overflow: hidden;
-} 
-.dropdown .dropbtn {
-    font-size: 16px;  
-    border: none;
-    outline: none;
-    width: 50px;
-    margin-left: 15px;
-    color: black;
-    padding: 21px 16px;
-    background-color: inherit;
-    font-family: inherit;
-}
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 100px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-.dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-.logo h1 {
-    padding: 10px 40px;
-    font-family: 'Protest Revolution', sans-serif;
-}
-.nav_menu {
-    display: flex;
-    cursor: pointer;
-}
-.nav_menu ul li {
-    display: inline-block;
-    text-decoration: none;
-    margin-top: 18px;
-    padding: 3px 5px;
-    color: gray;
-    font-size: 1rem;
-}
-.nav_menu ul li:hover {
-    color: rgb(61, 61, 61);
-    text-decoration: underline rgba(110, 110, 110, 0.3);
-    transition: 0.6s ease;
-}
-.icons {
-    display: flex;
-    cursor: pointer;
-}
-.cart {
-    padding: 18px 10px;
-    font-size: 1.3rem;
-    color: rgb(148, 148, 148);
-}
-.user {
-    margin: 13px 40px 13px 10px;
-    font-size: 1.2rem;
-    padding: 7px;
-    color: black;
-    border-radius: 50%;
-    background-color: rgb(213, 213, 213);
+*{
+    margin: 0px;
+    padding: 0px;
 }
 
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+/* BACKGROUND SETTING OF FIRST PAGE */
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------*/
 
-.container {
+.home {
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.4),rgba(203, 203, 203,0.4)),url(background.jpg);
     width: 100%;
     height: 100vh;
-    margin-top: 50px;
+    background-size: cover;
+    justify-content: center;
+    background-position: center;
 }
-.wrapper {
+
+/* HEADER SECTION STYLING */
+
+.icons {
+    max-width: 100%;
+    margin-right: 40px;
+}
+.icons ul {
+    list-style-type: none;
+    float: right;
+    margin-top: 30px;
+}
+.icons ul li {
+    display: inline-block;
+    margin: 10px;
+}
+.icons ul li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+}
+.home .logo img {
+    margin-top: 25px;
+    max-width: 200px;
+    max-height: 150px;
+    margin-left: 30px;
+}
+.icons ul li a:hover {
+    color: rgb(84, 83, 83);
+    box-shadow: 0px 0px 4px 4px rgba(56, 55, 55, 0.3);
+    transition: 0.6s ease;
+}
+
+/* LOGIN BOX DESIGNING */
+
+.home .login_box {
     width: 90%;
-    margin: auto;
+    max-width: 400px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5));
+    color: black;
+    margin: 20px auto 0;
+    border-radius: 20px;
+    padding: 35px;
+    text-align: center;
+    border: 1px white;
+    box-shadow: 0px 5px 20px 8px rgb(203, 203, 203);
+}
+.login_box h1 {
+    font-size: 50px;
+    margin: 0px;
+    font-style: bold;
+    font-family: 'Dancing Script', cursive;
+}
+.login_box p {
+    margin-bottom: 40px;
+}
+.booking_form {
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 2px;
+    text-align: left;
 }
-.product-details {
-    flex-basis: 45%;
+.booking_form .check {
+    width: calc(100%/2 - 40px);
+    text-align: left;
 }
-.all-images {
-    height: 90vh;
-    display: flex;
+.booking_form .check input {
+    line-height: 1.5;
+    width: 90%;
+    border: 0px solid transparent;
+    border-bottom: 2px solid rgb(53, 53, 53);
+    background: rgba(255, 255, 255, 0.3);
+    padding: 4px 8px;
+    margin: 5px 0px;
+    border-radius: 2px;
+    font-size: 1rem;
 }
-.black-color-div {
-    display: flex;
+.booking_form input {
+    line-height: 1.5;
+    width: 100%;
+    border: 0px solid transparent;
+    border-bottom: 2px solid rgb(53, 53, 53);
+    background: rgba(255, 255, 255, 0.3);
+    padding: 6px 15px;
+    margin: 10px 0px;
+    border-radius: 2px;
+    font-size: 1rem;
 }
-.white-color-div {
-    display: none;
+.booking_form span {
+    font-family: 'Courier New', Courier, monospace;
 }
-.side-images {
-    display: flex;
-    flex-direction: column;
-}
-.side-images img {
-    height: 12vh;
-    margin-bottom: 20px;
+.booking_form button {
+    background: rgb(232, 174, 66);
+    margin-top: 10px;
+    border: 2px solid rgb(232, 174, 66);
+    color: white;
+    font-family: sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.047rem;
+    line-height: 1;
+    padding: 0.8em 0.8em 0.78em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    margin-left: 28%;
     cursor: pointer;
-    width: 5vw;
-    opacity: 0.6;
 }
-.side-images img:hover {
-    opacity: 1;
+
+/*-------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
+/*BOOKING BUTTON DIV STYLING*/
+/*-------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
+
+.booking {
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.4),rgba(203, 203, 203,0.4)),url(bookingback.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    justify-content: center;
+    background-position: center;
 }
-.image img {
-    height: 80%;
-    width: 500px;
-    margin: auto 40px;
+.booking .logo img {
+    margin-top: 25px;
+    max-width: 200px;
+    max-height: 150px;
+    margin-left: 30px;
 }
-.brand-name {
-    font-size: 18px;
+.booking .login_box {
+    width: 90%;
+    max-width: 350px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5));
+    color: black;
+    margin-left: 500px;
+    margin-top: -20px;
+    border-radius: 20px;
+    padding: 35px;
+    text-align: center;
+    border: 1px white;
+    box-shadow: 0px 5px 20px 8px rgb(203, 203, 203);
+}
+.booking_form select {
+    line-height: 1.5;
+    width: 100%;
+    border: 0px solid transparent;
+    border-bottom: 2px solid rgb(53, 53, 53);
+    background: rgba(255, 255, 255, 0.3);
+    padding: 6px 15px;
+    margin: 10px 0px;
+    border-radius: 2px;
+    font-size: 1rem;
+}
+.booking .login_box p {
+    font-family: sans-serif;
+    letter-spacing: 0.06rem;
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+/*ABOUT PAGE STYLING*/
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+
+.about {
+    background: white;
+}
+.about .logo img {
+    margin-top: 5px;
+    max-width: 100px;
+    max-height: 70px;
+    margin-left: 30px;
+}
+.about header {
+    background: rgb(249, 248, 248);
+}
+.about .icons ul {
+    margin-top: 20px;
+}
+.about .about_pic img {
+    width: 100%;
+    height: 600px;
+}
+
+/*WELCOME TO MAJESTY HAVEN DIV DESIGNING*/
+
+.start {
+    display: flex;
+    padding: 50px 90px;
+}
+.heading h1 {
+    font-size: 40px;
+    margin-top: 90px;
+    font-weight: 100;
+    text-align: center;
+}
+.welcome {
+    width: 50%;
+    padding: 10px 50px;
+}
+.start .welcome p {
+    color: rgb(114, 114, 114);
+    font-size: 20px;
+    font-family: sans-serif;
+    justify-content: end;
+}
+.start .welcome h1 {
+    font-size: 45px;
+    margin-bottom: 30px;
+    font-weight: 200;
+}
+.offers {
+    width: 50%;
+    padding: 20px 50px;
+}
+.offers p i {
+    margin: 10px 20px;
+    color: rgb(232, 174, 66);
+}
+.offers p {
+    font-size: 30px;
+    color: rgb(114, 114, 114);
+}
+
+/*IMAGES DIV DESIGNING*/
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+    grid-gap: 2rem;
+    margin: 50px 120px;
+}
+.img1 img{
+    width: 370px;
+    height: 400px;
+    border-radius: 5px;
+    filter: grayscale(70%);
+}
+.images .img1:hover img{
+    filter: grayscale(0);
+    transform: scale(1.1);
+    box-shadow: 1px 4px 20px rgba(97, 95, 95, 0.8); 
+}
+.images .img1 {
+    position: relative;
+}
+.images .img1_text {
+    position: absolute;
+    left: 0;
+    color: white;
+    bottom: 45px;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+}
+
+/*DISCOVER OUR HOTEL DIV EDITING*/
+
+.explore {
+    background: linear-gradient(90deg, rgba(54, 54, 54,0.7),rgba(38, 38, 38, 0.7)),url(exploreback.jpg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 700px;
+    height: 40vh;
+    color: white;
+    text-align: center;
+    margin-top: 130px;
+    padding-top: 140px;
+    padding-bottom: 60px;
+}
+.explore h1 {
+    font-size: 60px;
+    font-weight: 200;
+    padding-bottom: 15px;
+}
+.explore h3 {
+    font-size: 20px;
+    font-weight: 100;
+}
+.explore i {
+    font-size: 7rem;
+    margin-top: 40px;
+    color: rgb(232, 174, 66);
+    cursor: pointer;
+}
+
+/*OUR GALLERY DIV EDITING*/
+
+.discover {
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+    grid-gap: 2rem;
+    margin: 50px 180px;
+}
+.disc_text i {
+    font-size: 3rem;
+    margin: 0px 20px;
+    padding-top: 0;
+    color: rgb(232, 174, 66);
+}
+.disc_text .heading {
+    font-size: 25px;
+    padding-right: 20px;
+}
+.disc_text .text {
+    font-size: 15px;
+    padding-top: 15px;
+    padding-right: 20px;
+}
+.more_about {
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+.disc1 {
+    width: 350px;
+    height: 220px;
+    border-radius: 10px;
+    border: 3px solid white;
+    box-shadow: 1px 1px 10px 2px lightgrey;
+    padding-top: 30px;
+}
+.disc1 button {
+    background: rgb(232, 174, 66);
+    color: white;
     font-weight: 600;
-    color: rgb(157, 157, 157);
+    font-size: 20px;
+    border: 2px solid rgb(232, 174, 66);
+    margin-top: 8%;
+    width: 110px;
+    margin-left: 120px;
+    margin-right: 120px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    cursor: pointer;
 }
-.content h2 {
-    font-size: 27px;
-    font-weight: 400;
-    margin-bottom: 8px;
+
+/*OUR GALLERY DIV EDITING*/
+
+.about .gallery h1 {
+    font-size: 40px;
+    font-weight: 100;
+    text-align: center;
 }
-.offer {
-    color: rgb(3, 171, 3);
-    font-weight: 500;
-    margin-bottom: 8px;
+.about .gallery h3 {
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: 100;
+    color: rgb(232, 174, 66);
+    font-family: sans-serif;
+    letter-spacing: 0.5rem;
 }
-.price-box {
+.gallery_pic {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 90px;
+    padding-left: 250px;
+    padding-right: 250px;
+    margin-bottom: 100px;
+}
+.gallery_pic .pic1 img{
+    height: 590px;
+    width: 700px;
+    padding: 5px;
+}
+.gallery_pic .pic2 img {
+    height: 190px;
+    width: 250px;
+    padding: 5px;
+    display: block;
+}
+.gallery_pic .pic3 img {
+    height: 350px;
+    width: 300px;
+    padding: 5px;
+}
+.gallery_pic .pic4 img {
+    height: 350px;
+    width: 650px;
+    padding: 5px;
+}
+.gallery_pic .pic5 img {
+    height: 200px;
+    width: 400px;
+    padding: 5px;
+    display: block;
+}
+.gallery_pic .pic6 img {
+    height: 410px;
+    width: 550px;
+    padding: 5px;
+}
+
+/*CONTACT DIV EDITING*/
+
+.about .contact {
+    background: linear-gradient(135deg,rgb(28, 27, 27),rgb(28, 27, 27));
+    height: 310px;
+    width: 100%;
+    color: rgb(217, 216, 216);
+    padding: 30px 0px;
+}
+.about .contact .contact_div {
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+    grid-gap: 6rem;
+    margin: 50px 180px;
+}
+
+/*FIRST CONTACT DIV STYLING*/
+
+.contact_intro h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 55px;
+    margin-bottom: 25px;
+}
+.contact_intro p {
+    font-family: 'Karla', sans-serif;
+    font-size: 20px;
+}
+
+/*FIRST CONTACT DIV ICON LIST STYLING*/
+
+.horizontal-list {
+    list-style: none;
+    padding-left: 10px;
+    margin: 20px;
+}
+.horizontal-list li {
+    display: inline-block;
+    font-weight: 100;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.horizontal-list li a {
+    color: rgb(217, 216, 216);
+    text-decoration: none;
+}
+.text-center {
+    text-align: center;
+}
+.horizontal-list li a i {
+    font-size: 1.2rem;
+}
+.social-icons li a i {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 50%;
+}
+.social-icons li a i:hover {
+    box-shadow: 0px 0px 6px 4px rgba(230, 196, 196, 0.3);
+}
+
+/*SECOND CONTACT DIV STYLING*/
+
+.contact_address {
+    padding-left: 30px;
+}
+.contact_address h3 {
+    font-size: 25px;
+    color: rgb(232, 174, 66);
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+.contact_address h4 {
+    font-size: 18px;
+    font-weight: 150;
+    margin-bottom: 12px;
+}
+.contact_address h5 {
+    font-size: 18px;
+    font-weight: 150;
+    font-weight: 100;
     margin-bottom: 7px;
 }
-.red-price {
-    font-size: 30px;
-    font-weight: 540;
-}
-strike {
-    color: rgb(157, 157, 157);
-    margin-right: 10px;
-}
-.off {
-    color: rgb(3, 171, 3);
+
+/*THIRD CONTACT DIV STYLING*/
+
+.contact_latest h3 {
     font-size: 25px;
-    margin-right: 10px;
+    color: rgb(232, 174, 66);
+    margin-top: 20px;
+    margin-bottom: 25px;
 }
-.rating {
-    display: flex;
+.contact_latest h5 {
+    font-size: 14px;
+    font-weight: 150;
+    font-weight: 100;
+    margin-bottom: 13px;
+    color: rgb(107, 106, 106);
+}
+.contact_latest input {
+    line-height: 2.5;
+    width: 100%;
+    border: 0px solid transparent;
+    border-bottom: 2px solid rgb(53, 53, 53);
+    background: rgba(255, 255, 255, 0.3);
+    padding: 6px 15px;
+    margin: 0px;
+    border-radius: 2px;
+    font-size: 1rem;
+}
+.contact_latest button {
+    background: rgb(244, 193, 99);
+    color: rgb(238, 233, 233);
+    font-weight: 100;
+    font-size: 14px;
+    border: 2px solid rgb(244, 193, 99);
+    margin-top: 3%;
+    width: 60px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+/*FOOTER SECTION STYLING*/
+
+footer {
+    background: linear-gradient(135deg,rgb(23, 23, 23),rgb(23, 23, 23));
+    height: 80px;
+    width: 100%;
+}
+footer .footer {
+    display: grid;
+    grid-template-columns: repeat(2,1fr) ;
+    grid-gap: 2rem;
+}
+.foot_list {
+    margin-left: 150px;
+    padding-top: 15px;
+}
+.copyright {
+    padding-top: 15px;
+    padding-right: 100px;
+    text-align: right;
+}
+.foot_list p {
+    display: inline;
+    font-size: 15px;
+    padding-left: 25px;
+    color: rgb(184, 182, 182);
+}
+.copyright p {
+    font-size: 15px;
+    color: rgb(79, 78, 78);
+    display: inline;
+}
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+/*SERVICES PAGE STYLING*/
+/*--------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+
+.services {
+    background: white;
+}
+.services .logo img {
+    margin-top: 10px;
+    max-width: 100px;
+    max-height: 70px;
+    margin-left: 30px;
+}
+.services header {
+    background: rgb(247, 245, 245);
+    box-shadow: 0px 0px 12px 20px rgb(230, 229, 229);
+}
+
+/*MAIN FEATURE STYLING*/
+
+.facility_heading h1 {
+    font-size: 40px;
+    margin-top: 90px;
+    font-weight: 100;
+    text-align: center;
+}
+.facility_heading h3 {
+    font-size: 15px;
+    font-weight: 100;
+    text-align: center;
+}
+.main_facility {
+    display: grid;
+    grid-template-columns: repeat(2,1fr) ;
+    grid-gap: 100px;
+    margin: 80px 150px;
+}
+.main_facility_image {
+    padding-left: 100px;
+}
+.main_facility_image img {
+    width: 500px;
+    height: 600px;
+    border-radius: 10px;
+}
+.main_facility_text h1 {
+    font-size: 45px;
+    font-weight: 250;
+    margin-bottom: 20px;
+    margin-top: 35px;
+}
+.main_facility_text .description {
+    font-size: 15px;
+    font-weight: 100;
+    text-align: left;
+    margin-bottom: 40px;
+    color: grey;
+}
+.main_facility_text h3 {
+    font-size: 20px;
+    font-weight: 300;
     margin-bottom: 15px;
 }
-.rate {
-    background-color: rgb(3, 171, 3);
+.main_facility_table .row {
+    margin-bottom: 7px;
+}
+.main_facility_table .text {
+    font-size: 22px;
+    color: rgb(83, 83, 83);
+}
+.main_facility_table .colon {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.main_facility_table .text i {
+    margin-right: 10px;
+    font-size: 1rem;
+}
+.main_facility_text button {
+    background: rgb(232, 174, 66);
     color: white;
-    padding: 2px 9px;
-    border-radius: 18px;
-    margin-right: 8px;
-}
-.rate span {
-    font-size: 1.4rem;
-    font-weight: 550;
-    padding-top: 6px;
-}
-.rate i {
-    font-size: 1rem;
-}
-.review {
-    color: rgb(157, 157, 157);
-    font-size: 1rem;
-    padding-top: 12px;
-}
-.color {
-    display: flex;
-    margin-bottom: 20px;
-}
-.color h3 {
-    color: rgb(157, 157, 157);
+    font-weight: 600;
     font-size: 15px;
-}
-.color-options {
-    padding: 3px;
+    margin-top: 30px;
+    padding: 10px 50px;
+    border-radius: 2px;
+    border: 5px solid rgb(232, 174, 66);
     cursor: pointer;
 }
-.color-options img {
-    width: 80px;
-    height: 80px;
-    margin-left: 15px;
+
+/*GUEST ROOM SECTIONS STYLING*/
+
+.rooms_section h1 {
+    text-align: center;
+    font-size: 45px;
+    font-weight: 200;
 }
-.size {
-    display: block;
+.rooms_section_images {
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+    grid-gap: 2rem;
+    margin: 60px 70px;
+}
+.rooms {
+    border-radius: 2px;
+    border: 3px solid white;
+    box-shadow: 1px 1px 10px 2px lightgrey;
+    width: 400px;
     margin-bottom: 30px;
 }
-.size h3 {
-    color: rgb(157, 157, 157);
-    font-size: 15px;
-    margin-bottom: 8px;
+.rooms img {
+    height: 350px;
+    width: 380px;
+    margin: 10px;
 }
-.size-options {
-    display: flex;
+.rooms .rooms_about {
+    margin: 10px;
 }
-.size-options ul li {
-    display: inline-block;
-    text-decoration: none;
-    padding: 10px 15px;
-    color: black;
-    font-size: 1.2rem;
-    margin-right: 15px;
-    border: 2px solid rgba(221, 221, 221, 0.5);
-    border-radius: 50%;
-    cursor: pointer;
+.rooms h3 {
+    font-size: 33px;
+    font-weight: 200;
+    margin-bottom: 15px;
 }
-button {
-    width: 200px;
-    height: 60px;
-    color: white;
+.rooms .rating i {
+    color: gold;
+    font-size: 1rem;
+    margin-bottom: 7px;
+}
+.rooms .price {
+    color: rgb(243, 202, 127);
+    font-size: 28px;
+    display: inline;
+}
+.rooms .description {
+    color: grey;
     font-size: 16px;
-    font-weight: 550;
-    border: 0;
+}
+.rooms .pernight {
+    display: inline;
+    font-size: 14px;
+    color: grey;
+}
+.rooms .leftcol {
+    color: grey;
+    padding-top: 0;
+}
+.rooms .details {
+    text-align: left;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.rooms .details tr {
+    padding: 2px;
+}
+.rooms .rightcol {
+    padding-left: 15px;
+    font-size: 17px;
+}
+.rooms:hover {
+    transform: scale(1.05);
+    box-shadow: 1px 4px 20px rgba(97, 95, 95, 0.8)
+}
+.rooms button {
+    background: rgb(232, 174, 66);
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 10px;
+    padding: 6px 40px;
     border-radius: 2px;
-    padding: 20px;
+    border: 5px solid rgb(232, 174, 66);
     cursor: pointer;
 }
-button .fa {
-    margin-right: 10px;
+.rooms_section .grand_room {
+    display: grid;
+    grid-template-columns: repeat(2,1fr) ;
+    grid-gap: 5rem;
+    margin: 60px 70px;
+    border-radius: 2px;
+    border: 3px solid white;
+    box-shadow: 1px 1px 10px 2px lightgrey;
+    padding: 25px;
 }
-.cart-button {
-    background-color: orange;
+.grand_room:hover {
+    transform: scale(1.08);
+    box-shadow: 1px 4px 20px rgba(97, 95, 95, 0.8)
 }
-.buy-button {
-    background-color: rgb(246, 90, 33);
+.grand_room_about h3 {
+    font-size: 40px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+.grand_room_about .rating i {
+    color: gold;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+.grand_room_about .price {
+    color: rgb(243, 202, 127);
+    font-size: 30px;
+    display: inline;
+}
+.grand_room_about .pernight {
+    display: inline;
+    font-size: 16px;
+    color: grey;
+}
+.grand_room_about .details {
+    font-size: 18px;
+    margin-top: 10px;
+    color: grey;
+}
+.grand_room_about .details tr {
+    padding: 3px;
+}
+.grand_room_about .details .rightcol {
+    color: black;
+    padding-left: 15px;
+}
+.grand_room .description {
+    font-size: 17px;
+    color: grey;
+    margin-top: 10px;
+}
+.grand_room .grand_room_about button {
+    background: rgb(232, 174, 66);
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 10px;
+    padding: 6px 40px;
+    border-radius: 2px;
+    border: 5px solid rgb(232, 174, 66);
+    cursor: pointer;
+}
+
+/*BOOKING BUTTON STYLING*/
+
+.rooms .rooms_about a {
+    padding: 90px;
+}
+.rooms_section a:hover button {
+    transform: scale(1.08);
+    box-shadow: 1px 2px 10px rgba(129, 128, 128, 0.6)
+}
+
+/*DINING AREA STYLING*/
+
+.dining_areas {
+    display: grid;
+    grid-template-columns: repeat(4,1fr) ;
+    grid-gap: 2rem;
+    margin: 50px 70px;
+}
+.dining h3 {
+    font-size: 20px;
+    color: rgb(239, 187, 91);
+    text-align: center;
+    margin-top: 90px;
+    font-family: sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.5rem;
+}
+.dining h1 {
+    font-size: 50px;
+    text-align: center;
+    font-weight: 300;
+    padding-bottom: 2px;
+}
+.dining_images img{
+    width: 300px;
+    height: 350px;
+    border-radius: 5px;
+    filter: grayscale(80%);
+}
+.dining_areas .dining_images:hover img{
+    filter: grayscale(0);
+    transform: scale(1.1);
+    box-shadow: 1px 4px 20px rgba(97, 95, 95, 0.8); 
+}
+.dining_images {
+    position: relative;
+}
+.dining_text {
+    position: absolute;
+    left: 0;
+    color: white;
+    bottom: 45px;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+}
+
+/*WELLNESS CIRCLE DIV EDITING*/
+
+.wellness_circle h1 {
+    font-size: 50px;
+    text-align: center;
+    font-weight: 300;
+    margin-top: 80px;
+    margin-bottom: 10px;
+}
+.wellness_circle p {
+    text-align: center;
+    padding-left: 210px;
+    padding-right: 210px;
+    color: grey;
+    font-size: 17px;
+    letter-spacing: 0.05rem;
+    margin-bottom: 60px;
+}
+.wellness_circle b {
+    font-weight: 100;
+    color: black;
+}
+.wellness {
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+    grid-gap: 2rem;
+    margin: 60px 70px;
+}
+.wellness .image img {
+    width: 380px;
+    height: 380px;
+    margin-bottom: 7px;
+}
+.spa {
+    padding: 10px;
+    border-radius: 2px;
+    border: 3px solid white;
+    box-shadow: 1px 1px 6px 2px lightgrey;
+    margin: 10px;
+}
+.spa .text .heading {
+    font-size: 21.5px;
+    font-weight: 650;
+    width: 187px;
+    padding-right: 10px;
+}
+.spa .text .sidetext {
+    width: 173px;
+    font-size: 16px;
+    color: grey;
+    text-align: right;
+}
+.spa .text .sidetext b {
+    font-size: 20px;
+    color: black;
+    font-weight: 550;
+    padding-top: 7px;
+}
+
+/*OTHER FACILITIES DIV EDITING*/
+
+.other_services h3 {
+    font-size: 20px;
+    color: rgb(239, 187, 91);
+    text-align: center;
+    margin-top: 90px;
+    font-family: sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.5rem;
+}
+.other_services h1 {
+    font-size: 50px;
+    text-align: center;
+    font-weight: 300;
+    padding-bottom: 2px;
+    margin-bottom: 80px;
+}
+.os_description {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: center;
+    background-color: rgb(252, 249, 244);
+    margin-bottom: 80px;
+}
+.os_description .os_pic img {
+    width: 369px;
+    height: 360px;
+}
+.os_description .os_pic:hover img{
+    transform: scale(1.1);
+    box-shadow: 1px 4px 20px rgba(97, 95, 95, 0.8); 
+}
+.os_description .os_pic_details {
+    text-align: center;
+    width: 369px;
+}
+.os_description h4 {
+    color: rgb(204, 153, 69);
+    font-size: 30px;
+    margin-top: 80px;
+    margin-bottom: 15px;
+}
+.os_description .os_pic_details p {
+    font-size: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 
+/*CONTACT SECTION DETAILS*/
 
-@media only screen and (max-width:1200px){
-    .wrapper {
-        flex-direction: column;
-        height: auto;
-        padding: 5% 0;
-    }
-    .all-images {
-        width: 100%;
-        height: 70vh;
-    }
-    .image {
-        height: 112%;
-        width: 80%;
-    }
-    .black-color-div {
-        justify-content: space-between;
-        width: 100%;
-    }
-    .white-color-div {
-        justify-content: space-between;
-        width: 100%;
-    }
-    .product-details {
-        padding-top: 10px;
-    }
-    .image img {
-        width: 96%;
-        height: 85%;
-        object-fit: inherit;
-    }
-    .side-images img {
-        width: 9vw;
-    }
-    .brand-name {
-        font-size: 23px;
-    }
-    .content h2 {
-        font-size: 50px;
-    }
-    .offer {
-        font-size: 20px;
-        margin-bottom: 12px;
-    }
-    .red-price {
-        font-size: 40px;
-        font-weight: 550;
-        margin-right: 13px;
-    }
-    strike {
-        font-size: 22px;
-    }
-    .off {
-        font-size: 35px;
-        font-weight: 600;
-    }
-    .price-box {
-        margin-bottom: 11px;
-    }
-    .rate i {
-        font-size: 1.19rem;
-    }
-    .rate span {
-        font-size: 1.6rem;
-        padding-top: 7px;
-    }
-    .off {
-        font-size: 35px;
-        font-weight: 600; 
-    }
-    .review {
-        font-size: 1.25rem;
-        padding-top: 10px;
-    }
-    .color h3 {
-        font-size: 18px;
-    }
-    .color-options img {
-        width: 92px;
-        height: 86px;
-    }
-    .size h3 {
-        font-size: 18px;
-    }
-    .size-options ul li {
-        padding: 10px 17px;
-        font-size: 1.35rem;
-    }
-    button {
-        margin-right: 8px;
-    }
+.services .contact {
+    background: linear-gradient(135deg,rgb(28, 27, 27),rgb(28, 27, 27));
+    height: 310px;
+    width: 100%;
+    color: rgb(217, 216, 216);
+    padding: 30px 0px;
 }
-@media only screen and (max-width:600px){
-    .logo h1 {
-        padding: 10px 0px;
-    }
-    .dropdown {
-        display: block;
-    }
-    .nav_menu {
-        display: none;
-    }
-    .black-color-div {
-        flex-direction: column;
-    }
-    .white-color-div {
-        flex-direction: column;
-    }
-    .side-images {
-        flex-direction: row;
-        justify-content: space-evenly;
-        order: 1;
-    }
-    .product-box {
-        width: 100%;
-    }
-    .image img {
-        width: 100%;
-        height: 92%;
-    }
-    .side-images img {
-        width: 80px;
-        height: 86px;
-    }
-    .brand-name {
-        font-size: 20px;
-    }
-    .content h2 {
-        font-size: 39px;
-    }
-    .size-options ul li {
-        padding: 7px 12px;
-        font-size: 1rem;
-        margin-right: 8px;
-    }
-    button {
-        width: 165px;
-    }
-    .cart-button {
-        padding: 11px;
-        margin-bottom: 5px;
-    }
-    .buy-button {
-        padding: 14px 16px;
-    }
+.services .contact .contact_div {
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+    grid-gap: 6rem;
+    margin: 50px 180px;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*WEDDING PAGE STYLING*/
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.wedding {
+    background: white;
+}
+.wedding .logo img {
+    margin-top: 5px;
+    max-width: 100px;
+    max-height: 70px;
+    margin-left: 30px;
+}
+.wedding header {
+    background: rgb(249, 248, 248);
+}
+.wedding .icons ul {
+    margin-top: 20px;
+}
+.top_pic {
+    background: linear-gradient(rgba(245, 245, 245,0.2),rgba(245, 245, 245,0.2)),url(wedback.jpeg);
+    width: 100%;
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+}
+.top_pic .wed_text img {
+    width: 100px;
+    height: 100px;
+}
+.wed_text {
+    color: white;
+    padding-top: 220px;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+}
+.top_pic .wed_text h1 {
+    font-size: 75px;
+    font-weight: 600;
+}
+.top_pic .wed_text h3 {
+    font-size: 30px;
+    font-weight: 520;
+}
+
+/*TIMELESS WEDDINGS DIV STYLING*/
+
+.wed_first_div h3 {
+    font-size: 40px;
+    margin-top: 90px;
+    letter-spacing: 0.09rem;
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 18px;
+}
+.wed_first_div p {
+    font-size: 17px;
+    letter-spacing: 0.045rem;
+    color: grey;
+    text-align: center;
+    margin-bottom: 50px;
+    padding-left: 250px;
+    padding-right: 250px;
+}
+.wed_first_div .video {
+    text-align: center;
+    background: black;
+    height: 330px;
+    padding-top: 25px;
+}
+
+/*WEDDING FUNCTION STYLING*/
+
+.wed_second_div {
+    margin-bottom: 100px;
+}
+.wed_second_div h1 {
+    font-size: 40px;
+    font-weight: 100;
+    text-align: center;
+    padding-bottom: 40px;
+}
+.wed_second_div h3 {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 90px;
+    font-weight: 100;
+    color: rgb(232, 174, 66);
+    font-family: sans-serif;
+    letter-spacing: 0.5rem;
+}
+.wed_second_div p {
+    font-size: 17px;
+    letter-spacing: 0.045rem;
+    color: grey;
+    text-align: center;
+    margin-bottom: 60px;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+.wed_function {
+    background-color: rgb(252, 249, 244);
+    padding-bottom: 25px;
+}
+.wed_function h4 {
+    color: rgb(204, 153, 69);
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 520;
+}
+.wed_function h3 {
+    font-size: 14px;
+    text-align: center;
+    font-weight: 100;
+    margin-top: 20px;
+    font-family: sans-serif;
+    letter-spacing: 0.2rem;
+    color: black;
+}
+.wed_function .haldi {
+    padding: 25px 60px;
+}
+.wed_function .haldi img {
+    height: 250px;
+    width: 270px;
+}
+.wed_function .haldi_image {
+    display: flex;
+    flex-wrap: wrap;
+}
+.wed_function .hi:hover img {
+    transform: scale(1.1);
+}
+.wed_function .mehndi {
+    padding: 25px 60px;
+}
+.wed_function .mehndi img {
+    height: 250px;
+    width: 270px;
+}
+.wed_function .mehndi_image {
+    display: flex;
+    flex-wrap: wrap;
+}
+.wed_function .mi:hover img {
+    transform: scale(1.1);
+}
+.wed_function .sangeet {
+    padding: 25px 60px;
+}
+.wed_function .sangeet img {
+    height: 300px;
+    width: 270px;
+}
+.wed_function .sangeet_image {
+    display: flex;
+    flex-wrap: wrap;
+}
+.wed_function .si:hover img {
+    transform: scale(1.1);
+}
+.wed_function .mandap {
+    padding: 25px 60px;
+}
+.wed_function .mandap img {
+    height: 300px;
+    width: 270px;
+}
+.wed_function .mandap_pic {
+    display: flex;
+    flex-wrap: wrap;
+}
+.wed_function .mai:hover img {
+    transform: scale(1.1);
+}
+.wed_function .shaadi {
+    padding: 25px 60px;
+}
+.wed_function .shaadi img {
+    height: 300px;
+    width: 270px;
+}
+.wed_function .shaadi_pic {
+    display: flex;
+    flex-wrap: wrap;
+}
+.wed_function .shi:hover img {
+    transform: scale(1.1);
+}
+
+/* WEDDING SPECIAL SERVICES DIV STYLING*/
+
+.wed_third_div {
+    background: linear-gradient(90deg, rgba(77, 77, 77, 0.5),rgba(77, 77, 77, 0.5)),url(offerweddingback.jpg);
+    height: 550px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 90px;
+}
+.wed_third_div .catering h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.wed_third_div .catering p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.wed_third_div .catering {
+    width: 400px;
+    border: 3px solid white;
+    border-radius: 5px;
+    height: 310px;
+    padding: 70px 50px;
+    color: white;
+    text-align: center;
+}
+.wed_third_div .special_ser_text {
+    width: 250px;
+    height: 450px;
+    color: white;
+}
+.wed_third_div .special_ser_text h1 {
+    font-size: 50px;
+    margin-top: 120px;
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.wed_third_div .wed_planning {
+    width: 400px;
+    border: 3px solid white;
+    border-radius: 5px;
+    height: 310px;
+    padding: 70px 50px;
+    color: white;
+    text-align: center;
+}
+.wed_third_div .wed_planning p {
+    margin-bottom: 60px;
+    font-size: 18px;
+}
+.wed_third_div .wed_planning h2 {
+    margin-bottom: 50px;
+    font-size: 40px;
+}
+.wed_third_div button {
+    background-color: rgb(4, 4, 71);
+    border: 2px solid rgb(4,4,71);
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    cursor: pointer;
+}
+.wed_third_div button:hover {
+    background-color: rgb(204, 153, 69);
+    border: 2px solid rgb(204, 153, 69);
+    transition: 0.2s;
+}
+
+/*OUR SPECIAL OFFER DIV STYLING*/
+
+.wed_fourth_div {
+    background-color: rgb(252, 249, 244);
+    width: 1300px;
+    margin-left: 90px;
+    border-radius: 5px;
+    text-align: center;
+    height: 310px;
+    margin-bottom: 100px;
+}
+.wed_fourth_div h3 {
+    font-size: 35px;
+    font-weight: 100;
+    margin-bottom: 20px;
+    padding-top: 40px;
+    color: rgb(204, 153, 69);
+    text-align: center;
+    letter-spacing: 0.05rem;
+}
+.wed_fourth_div p {
+    font-size: 17px;
+    font-weight: 150;
+    color: grey;
+    padding-left: 250px;
+    padding-right: 250px;
+    text-align: center;
+    line-height: 1.5rem;
+    letter-spacing: 0.06rem;
+    margin-bottom: 20px;
+}
+.wed_fourth_div button {
+    background-color: rgb(4, 4, 71);
+    border: 2px solid rgb(4, 4, 71);
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    cursor: pointer;
+}
+.wed_fourth_div button:hover {
+    background-color: rgb(204, 153, 69);
+    border: 2px solid rgb(204, 153, 69);
+    transition: 0.2s;
+}
+
+/*PRE WEDDING SHOOT DIV EDITING*/
+
+.wed_fifth_div {
+    text-align: center;
+}
+.wed_fifth_div h3 {
+    color: rgb(204, 153, 69);
+    font-size: 20px;
+    font-weight: 100;
+    letter-spacing: 0.3rem;
+    margin-bottom: 5px;
+}
+.wed_fifth_div h4 {
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+.wed_fifth_div .prewed {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15px;
+    margin-bottom: 90px;
+}
+.wed_fifth_div .prewed img {
+    width: 290px;
+    height: 400px;
+}
+.wed_fifth_div .prewed img:hover {
+    transform: scale(1.1);
+}
+
+/*CONTACT SECTION DIV EDITING*/
+
+.wedding .contact {
+    background: linear-gradient(135deg,rgb(28, 27, 27),rgb(28, 27, 27));
+    height: 310px;
+    width: 100%;
+    color: rgb(217, 216, 216);
+    padding: 30px 0px;
+}
+.wedding .contact .contact_div {
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+    grid-gap: 6rem;
+    margin: 50px 180px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+/*MORE INFO PAGE STYLING*/
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+
+.info .logo img {
+    margin-top: 5px;
+    max-width: 100px;
+    max-height: 70px;
+    margin-left: 30px;
+}
+.info header {
+    background: rgb(249, 248, 248);
+}
+
+/*INFO FIRST DIV STYLING*/
+
+.info-first-div {
+    background: linear-gradient(rgba(74, 74, 74,0.6),rgba(74, 74, 74,0.6)),url(infoback.jpg);
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+.info-details {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 11rem;
+    padding: 99px 60px 0px 60px;
+    color: white;
+}
+.infodetaildiv {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: space-around;
+}
+.infodetaildiv .heading {
+    font-size: 70px;
+}
+.infodetaildiv .text {
+    font-size: 25px;
+    padding-top: 20px;
 }
